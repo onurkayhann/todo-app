@@ -47,4 +47,17 @@ SQL;
 $result = $db->exec($query);
 var_dump($result);
 
+// Another type for adding a Todo
+$query = <<<SQL
+INSERT INTO todoList (todo, user)
+VALUES (:todo, :user)
+SQL;
+$statement = $db->prepare($query);
+$params = [
+    'todo' => 'Read more books',
+    'user' => 'Jax Teller'
+];
+$statement->execute($params);
+echo $db->lastInsertId();
+
 ?>
