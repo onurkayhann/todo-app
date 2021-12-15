@@ -26,6 +26,17 @@ function changeTodo(int $id, string $newTodo):void {
     echo $rows;
 }
 
-changeTodo(2, "ABCD");
+// Deleting from Todo
+function deleteTodo(int $id):void {
+    global $db;
+    $query = 'DELETE FROM todoList WHERE id = :id';
+    $statement = $db->prepare($query);
+    $statement->bindValue('id', $id);
+    $statement->execute();
+    $rows = $statement->rowCount();
+    echo $rows;
+} 
+
+deleteTodo(3);
 
 ?>
