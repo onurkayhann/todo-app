@@ -39,4 +39,12 @@ function deleteTodo(int $id):void {
 
 deleteTodo(3);
 
+// Function for adding a Todo
+$query = <<<SQL
+INSERT INTO todoList (todo, user)
+VALUES ("I went to muay thai today", "Onur")
+SQL;
+$result = $db->exec($query);
+var_dump($result);
+
 ?>
