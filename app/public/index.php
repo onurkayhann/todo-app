@@ -12,4 +12,20 @@ function showTodo() {
     }
 }
 
+showTodo();
+
+// Updating/changing one specific todo
+function changeTodo(int $id, string $newTodo):void {
+    global $db;
+    $query = 'UPDATE todoList SET todo = :todo WHERE id = :id';
+    $statement = $db->prepare($query);
+    $statement->bindValue('id', $id);
+    $statement->bindValue('todo', $newTodo);
+    $statement->execute();
+    $rows = $statement->rowCount();
+    echo $rows;
+}
+
+changeTodo(2, "ABCD");
+
 ?>
