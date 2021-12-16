@@ -1,7 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+</body>
+</html>
+
 <?php
 $db = new PDO('mysql:host=mysql;dbname=onurdb', 'onur', 'secret');
 
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+
 
 function showTodo() {
     global $db;
@@ -40,25 +56,27 @@ function deleteTodo(int $id):void {
 deleteTodo(3);
 
 // Function for adding a Todo
-$query = <<<SQL
-INSERT INTO todoList (todo, user)
-VALUES ("I went to muay thai today", "Onur")
-SQL;
-$result = $db->exec($query);
-var_dump($result);
+// $query = <<<SQL
+// INSERT INTO todoList (todo, user)
+// VALUES ("I went to muay thai today", "Onur")
+// SQL;
+// $result = $db->exec($query);
+// var_dump($result);
 
 // Another type for adding a Todo
-$query = <<<SQL
-INSERT INTO todoList (todo, user)
-VALUES (:todo, :user)
-SQL;
-$statement = $db->prepare($query);
-$params = [
-    'todo' => 'Read more books',
-    'user' => 'Jax Teller'
-];
-$statement->execute($params);
-echo $db->lastInsertId();
+// $query = <<<SQL
+// INSERT INTO todoList (todo, user)
+// VALUES (:todo, :user)
+// SQL;
+// $statement = $db->prepare($query);
+// $params = [
+//     'todo' => 'Read more books',
+//     'user' => 'Jax Teller'
+// ];
+// $statement->execute($params);
+// echo $db->lastInsertId();
+
+
 
 
 ?>
