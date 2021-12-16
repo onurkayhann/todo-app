@@ -5,9 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <div class="todoList">
+        <h1 class="header">My Todo</h1>
+
+        <ul>
+            <li><span class="todo"></span>Workout</li>
+            <li><span class="todo done"></span>Learn PHP</li>
+        </ul>
+
+        <form action="create.php"></form>
+    </div>
     
 </body>
 </html>
