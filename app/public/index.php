@@ -1,12 +1,4 @@
-<?php 
-
-require_once('db.php');
-
-$db = new DB();
-
-?>
-
-<!-- <?php
+<?php
 $db = new PDO('mysql:host=mysql;dbname=onurdb', 'onur', 'secret');
 
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -69,4 +61,4 @@ $statement->execute($params);
 echo $db->lastInsertId();
 
 
-?> -->
+?>
