@@ -1,4 +1,10 @@
+<?php 
 
+require_once('db.php');
+
+$db = new DB();
+
+?>
 
 <!-- <?php
 $db = new PDO('mysql:host=mysql;dbname=onurdb', 'onur', 'secret');
