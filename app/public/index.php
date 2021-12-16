@@ -1,30 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<!-- <?php
 
-    <div class="todoList">
-        <h1 class="header">My Todo</h1>
-
-        <ul>
-            <li><span class="todo"></span>Workout</li>
-            <li><span class="todo done"></span>Learn PHP</li>
-        </ul>
-
-        <form action="create.php"></form>
-    </div>
-    
-</body>
-</html>
-
-<?php
 $db = new PDO('mysql:host=mysql;dbname=onurdb', 'onur', 'secret');
 
 $db->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
@@ -66,7 +41,6 @@ function deleteTodo(int $id):void {
 } 
 
 deleteTodo(3);
-
 // Function for adding a Todo
 // $query = <<<SQL
 // INSERT INTO todoList (todo, user)
@@ -88,7 +62,4 @@ deleteTodo(3);
 // $statement->execute($params);
 // echo $db->lastInsertId();
 
-
-
-
-?>
+?> -->
