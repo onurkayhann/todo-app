@@ -48,7 +48,7 @@ if(isset($_POST['deleteTodo'])) {
   $todoList = $db->showTodo();
 
   foreach($todoList as $i) {
-    echo $i['todo'] . " - " . $i['user'] . "<br>";
+    echo $i['id'] . ". " . $i['todo'] . " - " . $i['user'] . "<br>";
   }
 
   ?>
