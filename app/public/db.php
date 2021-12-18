@@ -23,6 +23,14 @@ class DB {
         $stmt->execute(['todo' => $todo, 'user' => $user]);
         echo "todo created";
     }
+
+    public function showTodo() {
+        $sql = "SELECT * FROM myTodo";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute();
+        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $data;
+    }
 }
 
 ?>

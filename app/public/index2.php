@@ -20,6 +20,13 @@ $db = new DB();
     <input type="text" placeholder="User" name="user">
     <input type="submit" value="Create" name="createTodo">
   </form>
+
+  <?php
+  $data = $db->showTodo();
+  foreach($data as $i) {
+    echo $i['todo'] . " - " . $i['user'] . "<br>";
+  }
+  ?>
     
 </body>
 </html>
