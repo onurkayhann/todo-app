@@ -36,7 +36,7 @@ class DB {
         $sql = "DELETE FROM myTodo WHERE id = :id";
         $stmt = $this->connection->prepare($sql);
         $stmt->execute(['id' => $id]);
-        echo "todo deleted";
+        echo "Todo: " . $id . " is deleted";
     }
 }
 

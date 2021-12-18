@@ -6,6 +6,7 @@ $db = new DB();
 // Delete Todo
 if(isset($_POST['deleteTodo'])) {
   $id = $_POST['id'];
+  $db->deleteTodo($id);
 }
 
 ?>
