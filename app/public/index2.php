@@ -3,6 +3,11 @@ require_once('db.php');
 
 $db = new DB();
 
+// Delete Todo
+if(isset($_POST['deleteTodo'])) {
+  $id = $_POST['id'];
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -24,7 +29,7 @@ $db = new DB();
   </form>
 
   <h1>Delete</h1>
-  <form action="delete.php" method="POST">
+  <form method="POST">
     <input type="text" placeholder="id" name="id">
     <input type="submit" value="Delete" name="deleteTodo">
   </form>
