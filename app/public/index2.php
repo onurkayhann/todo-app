@@ -38,7 +38,7 @@ if(isset($_POST['deleteTodo'])) {
   <h1>Update</h1>
   <form action="update.php" method="POST">
     <input type="text" placeholder="id" name="id">
-    <input type="text" placeholder="User" name="User">
+    <input type="text" placeholder="Todo" name="todo">
     <input type="submit" value="Update" name="updateTodo">
   </form>
 

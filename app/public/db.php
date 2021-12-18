@@ -38,6 +38,13 @@ class DB {
         $stmt->execute(['id' => $id]);
         echo "Todo: " . $id . " is deleted";
     }
+
+    public function updateTodo($id, $todo) {
+        $sql = "UPDATE myTodo SET todo = :todo WHERE id = :id";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute(['id' => $id, 'todo' => $todo]);
+        echo "Todo: " . $id . " is updated";
+    }
 }
 
 ?>
