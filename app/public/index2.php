@@ -22,6 +22,13 @@ $db = new DB();
     <input type="submit" value="Create" name="createTodo">
   </form>
 
+  <h1>Delete</h1>
+  <form action="delete.php" method="POST">
+    <input type="text" placeholder="id" name="id">
+    <input type="submit" value="Delete" name="deleteTodo">
+  </form>
+
+  <h1>Todos</h1>
   <?php
 
   $todoList = $db->showTodo();
