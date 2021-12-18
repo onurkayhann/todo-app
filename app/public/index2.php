@@ -35,6 +35,13 @@ if(isset($_POST['deleteTodo'])) {
     <input type="submit" value="Delete" name="deleteTodo">
   </form>
 
+  <h1>Update</h1>
+  <form method="POST">
+    <input type="text" placeholder="id" name="id">
+    <input type="text" placeholder="User" name="User">
+    <input type="submit" value="Update" name="updateTodo">
+  </form>
+
   <h1>Todos</h1>
   <?php
 
