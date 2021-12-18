@@ -15,6 +15,7 @@ $db = new DB();
 </head>
 <body>
 
+  <h1>Create</h1>
   <form action="create.php" method="POST">
     <input type="text" placeholder="Todo" name="todo">
     <input type="text" placeholder="User" name="user">
@@ -22,10 +23,13 @@ $db = new DB();
   </form>
 
   <?php
-  $data = $db->showTodo();
-  foreach($data as $i) {
+
+  $todoList = $db->showTodo();
+
+  foreach($todoList as $i) {
     echo $i['todo'] . " - " . $i['user'] . "<br>";
   }
+
   ?>
     
 </body>

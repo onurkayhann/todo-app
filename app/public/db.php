@@ -28,8 +28,8 @@ class DB {
         $sql = "SELECT * FROM myTodo";
         $stmt = $this->connection->prepare($sql);
         $stmt->execute();
-        $data = $stmt->fetchAll(PDO::FETCH_ASSOC);
-        return $data;
+        $todoList = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $todoList;
     }
 }
 
