@@ -15,11 +15,11 @@ $db = new DB();
 </head>
 <body>
 
-<form action="create.php" method="POST">
-    <input type="text" placeholder="Name" name="name">
+  <form action="create.php" method="POST">
     <input type="text" placeholder="Todo" name="todo">
+    <input type="text" placeholder="User" name="user">
     <input type="submit" value="Create" name="createTodo">
-</form>
+  </form>
     
 </body>
 </html>
