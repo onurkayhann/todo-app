@@ -31,6 +31,13 @@ class DB {
         $todoList = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $todoList;
     }
+
+    public function deleteTodo($id) {
+        $sql = "DELETE FROM myTodo WHERE id = :id";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute(['id' => $id]);
+        echo "todo deleted";
+    }
 }
 
 ?>
