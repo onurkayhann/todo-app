@@ -8,4 +8,5 @@ if(isset($_POST['createTodo'])) {
 
     $db = new DB();
     $db->createTodo($todo, $user);
+    header('Location: index2.php');
 }

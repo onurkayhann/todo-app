@@ -21,7 +21,7 @@ class DB {
         $sql = "INSERT INTO myTodo (todo, user) VALUES (:todo, :user)";
         $stmt = $this->connection->prepare($sql);
         $stmt->execute(['todo' => $todo, 'user' => $user]);
-        echo "todo created";
+        // echo "todo created";
     }
 
     public function showTodo() {
@@ -43,7 +43,7 @@ class DB {
         $sql = "UPDATE myTodo SET todo = :todo WHERE id = :id";
         $stmt = $this->connection->prepare($sql);
         $stmt->execute(['id' => $id, 'todo' => $todo]);
-        echo "Todo: " . $id . " is updated";
+        //echo "Todo: " . $id . " is updated";
     }
 }
 
