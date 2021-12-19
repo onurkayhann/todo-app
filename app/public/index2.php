@@ -4,8 +4,14 @@ require_once('db.php');
 $db = new DB();
 
 // Delete Todo
-if(isset($_POST['deleteTodo'])) {
-  $id = $_POST['id'];
+// if(isset($_POST['deleteTodo'])) {
+//   $id = $_POST['id'];
+//   $db->deleteTodo($id);
+// }
+
+// Delete Todo
+if(isset($_GET['delete'])) {
+  $id = $_GET['delete'];
   $db->deleteTodo($id);
 }
 
@@ -48,10 +54,11 @@ if(isset($_POST['deleteTodo'])) {
   $todoList = $db->showTodo();
 
   foreach($todoList as $i) {
-    echo $i['id'] . ". " . $i['todo'] . " - " . $i['user'] . "<br>";
+    echo $i['id'] . ". " . $i['todo'] . " - " . $i['user'] . " " . "<a href='index2.php?delete={$i['id']}'>Delete</a>" . "<br>";
   }
 
   ?>
+
     
 </body>
 </html>
