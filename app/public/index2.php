@@ -24,7 +24,7 @@ if(isset($_GET['delete'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 <body>
@@ -55,7 +55,7 @@ if(isset($_GET['delete'])) {
   $todoList = $db->showTodo();
 
   foreach($todoList as $i) {
-    echo $i['id'] . ". " . $i['todo'] . " - " . $i['user'] . " " . "<a class='delete-btn' href='index2.php?delete={$i['id']}'>Delete<ion-icon name='close'></ion-icon></a>" . "<br>";
+    echo "<a class='done-btn' href='index2.php?done={$i['id']}'><ion-icon name='checkbox-outline'></ion-icon></a>" . " " . $i['id'] . ". " . $i['todo'] . " - " . $i['user'] . " " . "<a class='delete-btn' href='index2.php?delete={$i['id']}'>Delete<ion-icon name='close'></ion-icon></a>" . "<br>";
   }
 
   ?>
