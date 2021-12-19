@@ -1,0 +1,10 @@
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.delete-btn {
+    color: #fff;
+    background-color: red;
+    text-decoration: none;
+    padding: 2px 5px;
+}

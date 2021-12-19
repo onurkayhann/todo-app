@@ -24,7 +24,7 @@ if(isset($_GET['delete'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
 
@@ -35,11 +35,11 @@ if(isset($_GET['delete'])) {
     <input type="submit" value="Create" name="createTodo">
   </form>
 
-  <h1>Delete</h1>
+  <!-- <h1>Delete</h1>
   <form method="POST">
     <input type="text" placeholder="id" name="id">
     <input type="submit" value="Delete" name="deleteTodo">
-  </form>
+  </form> -->
 
   <h1>Update</h1>
   <form action="update.php" method="POST">
@@ -54,7 +54,7 @@ if(isset($_GET['delete'])) {
   $todoList = $db->showTodo();
 
   foreach($todoList as $i) {
-    echo $i['id'] . ". " . $i['todo'] . " - " . $i['user'] . " " . "<a href='index2.php?delete={$i['id']}'>Delete</a>" . "<br>";
+    echo $i['id'] . ". " . $i['todo'] . " - " . $i['user'] . " " . "<a class='delete-btn' href='index2.php?delete={$i['id']}'>Delete</a>" . "<br>";
   }
 
   ?>
