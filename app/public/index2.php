@@ -25,6 +25,7 @@ if(isset($_GET['delete'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo</title>
     <link rel="stylesheet" href="css/main.css">
+
 </head>
 <body>
 
@@ -54,12 +55,13 @@ if(isset($_GET['delete'])) {
   $todoList = $db->showTodo();
 
   foreach($todoList as $i) {
-    echo $i['id'] . ". " . $i['todo'] . " - " . $i['user'] . " " . "<a class='delete-btn' href='index2.php?delete={$i['id']}'>Delete</a>" . "<br>";
+    echo $i['id'] . ". " . $i['todo'] . " - " . $i['user'] . " " . "<a class='delete-btn' href='index2.php?delete={$i['id']}'>Delete<ion-icon name='close'></ion-icon></a>" . "<br>";
   }
 
   ?>
 
-    
+
+<script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 </html>
 
