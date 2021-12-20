@@ -1,7 +1,7 @@
 /* ---- COLORS ---- */
 /* -- #9c88ff; -- */
 /* -- #c23616 -- */
-/* -- #0097e6 -- */
+/* -- #0097e6 / #009B77 -- */
 /* -- #ECF0F1 -- */
 /* -- #fbc531 -- */
 
@@ -39,12 +39,12 @@ input[type="checkbox"]:checked + label.markTodo {
 }
 
 input[type="submit"] {
-  background-color: #0097e6;
+  background-color: #009B77;
   text-transform: uppercase;
   border: none;
-  color: #ecf0f1;
+  color: #fbc531;
   padding: 13px 32px;
-  margin-left: 10px;
+  margin-left: 20px;
   cursor: pointer;
 }
 
