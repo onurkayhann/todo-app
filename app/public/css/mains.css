@@ -14,6 +14,7 @@ body {
 /* ---- BUTTONS/INPUTS ---- */
 
 input[type=checkbox]:checked + label.markTodo {
+  color: #e84118;
   text-decoration: line-through;
 }
 
