@@ -1,0 +1,43 @@
+/* ---- COLORS ---- */
+/* -- purple: #9A52B7; -- */
+/* -- red: #DC0809 -- */
+/* -- white: #ECF0F1 -- */
+
+
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* ---- BUTTONS/INPUTS ---- */
+
+input[type=checkbox]:checked + label.markTodo {
+  text-decoration: line-through;
+}
+
+input[type=submit] {
+  background-color: #9A52B7;
+  text-transform: uppercase;
+  border: none;
+  color: #ECF0F1;
+  padding: 13px 32px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.done-btn {
+  color: #fff;
+  background-color: gray;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 2px 5px;
+}
+
+.delete-btn {
+  color: #ECF0F1;
+  background-color: #DC0809;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  margin-left: 16px;
+}
