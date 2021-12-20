@@ -55,7 +55,7 @@ if(isset($_GET['delete'])) {
   $todoList = $db->showTodo();
 
   foreach($todoList as $i) {
-    echo "<input type='checkbox' value='1'><label class='markTodo'> {$i['id']}. {$i['todo']} - {$i['user']} </label>" .  "<a class='delete-btn' href='index2.php?delete={$i['id']}'>Delete<ion-icon name='close'></ion-icon></a>" . "<br>" . "<br>" . "<br>";
+    echo "<input type='checkbox' value='1'><label class='markTodo'> {$i['id']}. {$i['todo']} - {$i['user']} </label>" .  "<a class='delete-btn' href='index2.php?delete={$i['id']}'><ion-icon name='close'></ion-icon></a>" . "<br>" . "<br>" . "<br>" . "<br>";
   }
   ?>
 

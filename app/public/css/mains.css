@@ -1,12 +1,14 @@
 /* ---- COLORS ---- */
-/* -- purple: #9A52B7; -- */
-/* -- red: #DC0809 -- */
-/* -- white: #ECF0F1 -- */
+/* -- #9c88ff; -- */
+/* -- #c23616 -- */
+/* -- #0097e6 -- */
+/* -- #ECF0F1 -- */
 
 
 
 body {
   font-family: "Roboto", sans-serif;
+  background-color: #9c88ff;
 }
 
 /* ---- BUTTONS/INPUTS ---- */
@@ -16,7 +18,7 @@ input[type=checkbox]:checked + label.markTodo {
 }
 
 input[type=submit] {
-  background-color: #9A52B7;
+  background-color: #0097e6;
   text-transform: uppercase;
   border: none;
   color: #ECF0F1;
@@ -34,8 +36,9 @@ input[type=submit] {
 }
 
 .delete-btn {
+  font-size: 17px;
   color: #ECF0F1;
-  background-color: #DC0809;
+  background-color: #c23616;
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px 20px;
