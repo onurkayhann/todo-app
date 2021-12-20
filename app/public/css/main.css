@@ -4,16 +4,16 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+input[type=checkbox]:checked + label.markTodo {
+  text-decoration: line-through;
+}
+
 .done-btn {
   color: #fff;
   background-color: gray;
   text-decoration: none;
   text-transform: uppercase;
   padding: 2px 5px;
-}
-
-.done {
-  text-decoration: line-through;
 }
 
 .delete-btn {
