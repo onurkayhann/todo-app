@@ -45,6 +45,12 @@ class DB {
         $stmt->execute(['id' => $id, 'todo' => $todo]);
         //echo "Todo: " . $id . " is updated";
     }
+
+    public function markTodo($as, $id) {
+        $sql = "UPDATE myTodo SET as = :as WHERE id = 0";
+        $stmt = $this->connection->prepare($sql);
+        $stmt->execute(['as' => $as, 'id' => $id]);
+    }
 }
 
 ?>

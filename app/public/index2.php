@@ -23,7 +23,7 @@ if(isset($_GET['delete'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Todo</title>
+    <title>u04-TODO-APP</title>
     <link rel="stylesheet" href="css/style.css">
 
 </head>
@@ -55,10 +55,27 @@ if(isset($_GET['delete'])) {
   $todoList = $db->showTodo();
 
   foreach($todoList as $i) {
-    echo "<a class='done-btn' href='done.php?done={$i['id']}'><ion-icon name='checkbox-outline'></ion-icon></a>" . " " . $i['id'] . ". " . $i['todo'] . " - " . $i['user'] . " " . "<a class='delete-btn' href='index2.php?delete={$i['id']}'>Delete<ion-icon name='close'></ion-icon></a>" . "<br>";
+    echo "<label class='container'><input type='checkbox'><span class='checkmark'></span></label>" . "<a class='done-btn done' href='done.php?as=done&id={$i['id']}'><ion-icon name='checkbox-outline'></ion-icon></a>" . " " . $i['id'] . ". " . $i['todo'] . " - " . $i['user'] . " " . "<a class='delete-btn' href='index2.php?delete={$i['id']}'>Delete<ion-icon name='close'></ion-icon></a>" . "<br>";
   }
-
   ?>
+
+  <!-- <a class='done-btn done' href='done.php?as=done&id={$i['id']}'><ion-icon name='checkbox-outline'></ion-icon></a> -->
+  
+  <!-- <?php foreach($todoList as $i): ?>
+    <div class="todo-container">
+    <a class='done-btn' href='done.php?as=done&id=<?php echo $i['id']?>'><ion-icon name='checkbox-outline'></ion-icon></a>
+    <p class="todo <?php echo $i['done'] ? ' done' : '';?>"><?php echo $i['id'] . ". " . " " . $i['todo'] . " - " . $i['user'] . " " ?></p>
+    <a class='delete-btn' href='index2.php?delete=<?php echo $i['id'] ?>'>Delete<ion-icon name='close'></ion-icon></a>
+    </div>
+  <?php endforeach; ?> -->
+
+
+
+
+  
+  
+
+  
 
 
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
