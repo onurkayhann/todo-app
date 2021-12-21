@@ -70,11 +70,13 @@ input[type="submit"] {
 /* ---- BUTTONS ---- */
 
 .done-btn {
+  font-size: 17px;
   color: #fff;
-  background-color: gray;
+  background-color: blue;
   text-decoration: none;
   text-transform: uppercase;
-  padding: 2px 5px;
+  padding: 10px 20px;
+  margin-left: 15px;
 }
 
 .delete-btn {
@@ -84,5 +86,5 @@ input[type="submit"] {
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px 20px;
-  margin-left: 20px;
+  margin-left: 15px;
 }

@@ -3,11 +3,6 @@ require_once('db.php');
 
 $db = new DB();
 
-// Delete Todo
-// if(isset($_POST['deleteTodo'])) {
-//   $id = $_POST['id'];
-//   $db->deleteTodo($id);
-// }
 
 // Delete Todo
 if(isset($_GET['delete'])) {
@@ -30,7 +25,7 @@ if(isset($_GET['done'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>u04-TODO-APP</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Sora&display=swap" rel="stylesheet">
 
 </head>
@@ -57,20 +52,9 @@ if(isset($_GET['done'])) {
   $todoList = $db->showTodo();
 
   foreach($todoList as $i) {
-    echo "<input type='checkbox' value='1'><label class='markTodo'> {$i['id']}. {$i['todo']} - {$i['user']} </label>" .  "<a class='delete-btn' href='index2.php?delete={$i['id']}'><ion-icon name='close'></ion-icon></a>" . " " . "<a class='done-btn' href='index2.php?done={$i['id']}'></a>" . "<br>" . "<br>" . "<br>" . "<br>";
+    echo "<input type='checkbox' value='1'><label class='markTodo'> {$i['id']}. {$i['todo']} - {$i['user']} </label>" .  "<a class='delete-btn' href='index2.php?delete={$i['id']}'><ion-icon name='close'></ion-icon></a>" . " " . "<a class='done-btn' href='index2.php?done={$i['id']}'><ion-icon name='refresh'></ion-icon></a>" . "<br>" . "<br>" . "<br>" . "<br>";
   }
   ?>
-
-  
-
-
-
-
-  
-  
-
-  
-
 
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
