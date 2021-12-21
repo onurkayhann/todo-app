@@ -15,6 +15,14 @@ if(isset($_GET['delete'])) {
   $db->deleteTodo($id);
 }
 
+// Mark as done
+if(isset($_GET['done'])) {
+  $id = $_GET['done'];
+
+  // $db = new DB();
+  $db->markTodo($id);
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -56,7 +64,7 @@ if(isset($_GET['delete'])) {
   $todoList = $db->showTodo();
 
   foreach($todoList as $i) {
-    echo "<input type='checkbox' value='1'><label class='markTodo'> {$i['id']}. {$i['todo']} - {$i['user']} </label>" .  "<a class='delete-btn' href='index2.php?delete={$i['id']}'><ion-icon name='close'></ion-icon></a>" . "<br>" . "<br>" . "<br>" . "<br>";
+    echo "<input type='checkbox' value='1'><label class='markTodo'> {$i['id']}. {$i['todo']} - {$i['user']} </label>" .  "<a class='delete-btn' href='index2.php?delete={$i['id']}'><ion-icon name='close'></ion-icon></a>" . " " . "<a class='done-btn' href='index2.php?done={$i['id']}'></a>" . "<br>" . "<br>" . "<br>" . "<br>";
   }
   ?>
 

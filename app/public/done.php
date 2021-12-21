@@ -3,12 +3,11 @@
 require_once ('db.php');
 
 
-if(isset($_GET['markTodo'])) {
-    $as = $_GET['as'];
+if(isset($_GET['done'])) {
     $id = $_GET['id'];
 
     $db = new DB();
-    $db->markTodo($as, $id)
+    $db->markTodo($id);
 }
 
 header('location: index2.php');
