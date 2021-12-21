@@ -1,13 +1,14 @@
 /* ---- COLORS ---- */
-/* -- Body background: #130f40 -- */
-/* -- Delete button font color: #ECF0F1 -- */
-/* -- Delete button background color: #c23616 -- */
-/* -- Todo font color: #0097e6 / #2ecc71 -- */
-/* -- H1 font color and line-through color for todos: #fbc531 -- */
-/* -- Border color for h1 and placeholder, 
-      background color for 
-      create/update button: #009B77 -- */
-/* -- Todo font color: #2ecc71 -- */
+/* -- #130f40 -- */
+/* -- #ECF0F1 -- */
+/* -- #FF6F61 -- */
+/* -- #0097e6 -- */
+/* -- #fbc531 -- */
+/* -- #009B77 -- */
+/* -- #2ecc71 -- */
+/* -- rgb(228, 228, 194) -- */
+/* -- #0072B5 -- */
+/* -- #FF6F61 -- */
 
 body {
   font-family: "Sora", sans-serif;
@@ -72,17 +73,17 @@ input[type="submit"] {
 .done-btn {
   font-size: 17px;
   color: #fff;
-  background-color: blue;
+  background-color: #0072B5;
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px 20px;
-  margin-left: 15px;
+  margin-left: 12px;
 }
 
 .delete-btn {
   font-size: 17px;
   color: #ecf0f1;
-  background-color: #c23616;
+  background-color: #FF6F61;
   text-decoration: none;
   text-transform: uppercase;
   padding: 10px 20px;
