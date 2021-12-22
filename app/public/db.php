@@ -1,3 +1,5 @@
+<!-- CONNECTING TO DATABASE -->
+
 <?php 
 
 class DB {

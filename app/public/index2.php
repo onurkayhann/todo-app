@@ -47,31 +47,21 @@ if(isset($_GET['done'])) {
   </form>
 
   <h1>Todos</h1>
-  <?php
+  <?php $todoList = $db->showTodo(); ?>
 
-  $todoList = $db->showTodo();
 
-  foreach($todoList as $i) {
-    echo $i['id'] . ". " . " " . $i['todo'] . " " . " - " . " " . $i['user'] . "<a class='delete-btn' href='index2.php?delete={$i['id']}'><ion-icon name='close'></ion-icon></a>" . " " . "<a class='done-btn' href='index2.php?done={$i['id']}'><ion-icon name='checkmark'></ion-icon></a>" . "<br>" . "<br>" . "<br>" . "<br>";
-  }
-  ?>
+  <?php foreach($todoList as $i): ?>
+  <p class="item<?php echo $i['done'] ? ' done' : ' '?>">
+  <?php echo $i['id']?>.
+  <?php echo $i['todo']?> -
+  <?php echo $i['user']?>
+  </p>
+  <a class='delete-btn' href='index2.php?delete=<?php echo $i['id']?>'><ion-icon name='close'></ion-icon></a>
+  <a class='done-btn' href='index2.php?done=<?php echo $i['id']?>'><ion-icon name='checkmark'></ion-icon></a>
+  <br>
+  <br>
+<?php endforeach; ?>
 
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 </html>
-
-
-
-
-   <?php foreach($todoList as $i): ?>
-  <p class="item<?php echo $i['done'] ? ' done' : ' '?>">
-  <?php echo $i['id']?>
-  <?php echo $i['todo']?> 
-  <?php echo $i['user']?>
-</p>
-  <a class='delete-btn' href='index2.php?delete=<?php echo $i['id']?>'><ion-icon name='close'></ion-icon></a>
-  <a class='done-btn' href='index2.php?done=<?php echo $i['id']?>'><ion-icon name='checkmark'></ion-icon></a>
-  
-<?php endforeach; ?> 
-
-
