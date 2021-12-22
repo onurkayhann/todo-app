@@ -52,7 +52,7 @@ if(isset($_GET['done'])) {
   $todoList = $db->showTodo();
 
   foreach($todoList as $i) {
-    echo $i['id'] . ". " . " " . $i['todo'] . " " . $i['user'] . "<a class='delete-btn' href='index2.php?delete={$i['id']}'><ion-icon name='close'></ion-icon></a>" . " " . "<a class='done-btn' href='index2.php?done={$i['id']}'><ion-icon name='refresh'></ion-icon></a>" . "<br>" . "<br>" . "<br>" . "<br>";
+    echo $i['id'] . ". " . " " . $i['todo'] . " " . " - " . " " . $i['user'] . "<a class='delete-btn' href='index2.php?delete={$i['id']}'><ion-icon name='close'></ion-icon></a>" . " " . "<a class='done-btn' href='index2.php?done={$i['id']}'><ion-icon name='checkmark'></ion-icon></a>" . "<br>" . "<br>" . "<br>" . "<br>";
   }
   ?>
 
