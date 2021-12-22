@@ -1,5 +1,3 @@
-<!-- CONNECTING TO DATABASE -->
-
 <?php 
 
 class DB {
@@ -45,7 +43,6 @@ class DB {
         $sql = "UPDATE myTodo SET todo = :todo WHERE id = :id";
         $stmt = $this->connection->prepare($sql);
         $stmt->execute(['id' => $id, 'todo' => $todo]);
-        //echo "Todo: " . $id . " is updated";
     }
 
     public function markTodo($id) {

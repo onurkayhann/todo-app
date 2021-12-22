@@ -8,5 +8,5 @@ if(isset($_POST['updateTodo'])) {
 
     $db = new DB();
     $db->updateTodo($id, $todo);
-    header('location: index2.php');
+    header('Location: index2.php');
 }

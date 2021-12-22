@@ -15,7 +15,6 @@ if(isset($_GET['done'])) {
   $id = $_GET['done'];
   $db->markTodo($id);
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -60,7 +59,7 @@ if(isset($_GET['done'])) {
   <a class='done-btn' href='index2.php?done=<?php echo $i['id']?>'><ion-icon name='checkmark'></ion-icon></a>
   <br>
   <br>
-<?php endforeach; ?>
+  <?php endforeach; ?>
 
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>

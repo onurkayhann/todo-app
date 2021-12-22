@@ -8,6 +8,5 @@ if(isset($_GET['done'])) {
 
     $db = new DB();
     $db->markTodo($id);
+    header('Location: index2.php');
 }
-
-header('location: index2.php');
