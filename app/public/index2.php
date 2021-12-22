@@ -60,3 +60,18 @@ if(isset($_GET['done'])) {
 </body>
 </html>
 
+
+
+
+   <?php foreach($todoList as $i): ?>
+  <p class="item<?php echo $i['done'] ? ' done' : ' '?>">
+  <?php echo $i['id']?>
+  <?php echo $i['todo']?> 
+  <?php echo $i['user']?>
+</p>
+  <a class='delete-btn' href='index2.php?delete=<?php echo $i['id']?>'><ion-icon name='close'></ion-icon></a>
+  <a class='done-btn' href='index2.php?done=<?php echo $i['id']?>'><ion-icon name='checkmark'></ion-icon></a>
+  
+<?php endforeach; ?> 
+
+
