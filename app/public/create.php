@@ -2,6 +2,8 @@
 
 require_once 'db.php';
 
+// Create
+
 if(isset($_POST['createTodo'])) {
     $todo = $_POST['todo'];
     $user = $_POST['user'];

@@ -1,5 +1,7 @@
 <?php 
 
+// My database connection and functions with OOP
+
 class DB {
     private $dbHost = "mysql";
     private $dbUser = "onur";

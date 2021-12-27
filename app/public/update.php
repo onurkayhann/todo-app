@@ -2,6 +2,8 @@
 
 require_once 'db.php';
 
+// Update
+
 if(isset($_POST['updateTodo'])) {
     $id = $_POST['id'];
     $todo = $_POST['todo'];

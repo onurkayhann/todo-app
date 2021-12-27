@@ -30,6 +30,8 @@ if(isset($_GET['done'])) {
 </head>
 <body>
 
+<!-- Form for Create -->
+
   <h1>Create</h1>
   <form action="create.php" method="POST">
     <input type="text" placeholder="Todo" name="todo">
@@ -37,6 +39,7 @@ if(isset($_GET['done'])) {
     <input type="submit" value="Create" name="createTodo">
   </form>
 
+  <!-- Form for Update -->
 
   <h1>Update</h1>
   <form action="update.php" method="POST">
@@ -45,9 +48,12 @@ if(isset($_GET['done'])) {
     <input type="submit" value="Update" name="updateTodo">
   </form>
 
+  <!-- Where Todos land dynamically -->
+
   <h1>Todos</h1>
   <?php $todoList = $db->showTodo(); ?>
 
+  <!-- Foreach loop to dynamically make echo id, todo, and user -->
 
   <?php foreach($todoList as $i): ?>
   <p class="item<?php echo $i['done'] ? ' done' : ' '?>">
