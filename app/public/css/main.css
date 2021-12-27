@@ -54,6 +54,10 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+input[type="submit"]:hover {
+  background-color: #3ae374;
+}
+
 /* ---- BUTTONS ---- */
 
 .done-btn {
@@ -66,6 +70,10 @@ input[type="submit"] {
   margin-left: 12px;
 }
 
+.done-btn:hover {
+  background-color: #1e3799;
+}
+
 .delete-btn {
   font-size: 17px;
   color: #ecf0f1;
@@ -75,6 +83,10 @@ input[type="submit"] {
   padding: 10px 20px;
   margin-left: 15px;
 }
+
+.delete-btn:hover {
+  background-color: #eb2f06;
+} 
 
 /* ---- OTHERS ---- */
 
