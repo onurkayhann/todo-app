@@ -36,11 +36,35 @@ TODO APP functions:
     - Create, Read, Update, and Delete.
     - User can Create a Todo
     - User can Read a Todo
-    - User can update a Todo
+    - User can Update a Todo
     - User can Delete a Todo 
     - User will do everything dynamically and affect the database.
     - Be able to affect the database by clicking 'done' button.
+    - Create and Delete button are provided as well.
     - User will be able to see when the Todo is marked, such as line-through (dynamically)
+    - There is a Toggle function
 
 TODO app style:
     - This TODO is done by object oriented programming.
+
+Table (onurdb):
+    environment:
+      MYSQL_ROOT_PASSWORD: "secret"
+      MYSQL_USER: "onur"
+      MYSQL_PASSWORD: "secret"
+      MYSQL_DATABASE: "onurdb"
+    volumes:
+      - mysqldata:/var/lib/mysql
+    ports:
+      - 3303:3303
+  adminer:
+    image: adminer:latest
+    restart: always
+    ports:
+      - 8081:8080
+
+Table contains (myTodo):
+    - id: int, length(11) - auto-incremenet, PRIMARY
+    - todo: VARCHAR, length(255) NULL
+    - user: VARCHAR, length(20), NULL
+    - done: tinyint, NULL
