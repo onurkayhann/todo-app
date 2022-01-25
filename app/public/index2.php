@@ -61,12 +61,13 @@ if(isset($_GET['done'])) {
   <?php echo $i['todo']?> -
   <?php echo $i['user']?>
   </p>
-  <a class='delete-btn' href='index2.php?delete=<?php echo $i['id']?>'><ion-icon name='close'></ion-icon></a>
+  <a class='delete-btn' href='index2.php?delete=<?php echo $i['id']?>' onclick='return confirmDelete()'><ion-icon name='close'></ion-icon></a>
   <a class='done-btn' href='index2.php?done=<?php echo $i['id']?>'><ion-icon name='checkmark'></ion-icon></a>
   <br>
   <br>
   <?php endforeach; ?>
 
+<script src="js/script.js"></script>
 <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
 </body>
 </html>
