@@ -1,10 +1,10 @@
-<?php 
+<?php
 
-require_once ('db.php');
+require_once('db.php');
 
 // Done
 
-if(isset($_GET['done'])) {
+if (isset($_GET['done'])) {
     $id = $_GET['id'];
 
     $db = new DB();

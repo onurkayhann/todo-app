@@ -53,5 +53,3 @@ class DB {
         $stmt->execute(['done' => 1, 'id' => $id]);
     }
 }
-
-?>
