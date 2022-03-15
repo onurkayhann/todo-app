@@ -1,4 +1,4 @@
-# My project u04-TODO-APP
+# A simple TODO app
 
 ## Getting started
 - Run: ```docker-compose up```.
@@ -8,5 +8,5 @@
 ## Motivation
 This is a TODO app where you can Create, Read, Update and Delete.
 
-## Referenses
-I want to learn as much as possible.
+## References
+This project was made with object oriented PHP
